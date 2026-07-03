@@ -1,0 +1,17 @@
+[project]
+name = "sample-payment-service"
+version = "0.1.0"
+description = "Small payment service repo for testing Agentic PR Review workflows"
+requires-python = ">=3.12,<3.14"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8,<9"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
