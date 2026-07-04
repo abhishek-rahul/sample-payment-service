@@ -9,8 +9,11 @@ def calculate_final_amount(
     amount: float,
     coupon: Coupon | None = None,
     today: date | None = None,
+    processing_fee: float = 0,
 ) -> float:
     validate_amount(amount)
 
     current_date = today or date.today()
-    return apply_coupon_discount(amount, coupon, current_date)
+    discounted_amount = apply_coupon_discount(amount, coupon, current_date)
+
+    return discounted_amount + processing_fee
