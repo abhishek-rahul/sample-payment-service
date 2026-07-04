@@ -38,3 +38,16 @@ python -m app.main
 ## Why this repo exists
 
 This repository is used as the target repo for creating sample PRs. The Agentic PR Review Orchestrator will fetch PR diffs from this repo and review them.
+
+## PR Review Testing Scenarios
+
+This repository is also used to test an Agentic PR Review workflow.
+
+Recommended sample PR categories:
+
+1. Documentation-only change
+2. Business logic change without matching tests
+3. Coupon validation bug
+4. Good change with proper tests
+
+The PR review workflow should treat documentation-only changes as low risk and should not report unrelated legacy code issues.
